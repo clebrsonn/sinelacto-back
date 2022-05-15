@@ -30,7 +30,7 @@ public class ResourceServerConfig  extends ResourceServerConfigurerAdapter{
 	@Autowired
 	private JwtTokenStore tokenStore;
 	
-	private static final String[] PUBLIC = {"/oauth/token","/v3/api-docs/**", "/users/login","/v2/api-docs", "/configuration/ui", "/swagger-resources/**", "/configuration/**", "/swagger-ui/**", "/webjars/**"};
+	private static final String[] PUBLIC = {"/oauth/token"};
 	
 	private static final String[] OPERATOR_OR_ADMIN = {"/products/**", "/categories/**"}; 
 	
@@ -49,6 +49,7 @@ public class ResourceServerConfig  extends ResourceServerConfigurerAdapter{
 		.antMatchers(HttpMethod.GET, OPERATOR_OR_ADMIN).permitAll()
 		.antMatchers(OPERATOR_OR_ADMIN).hasAnyRole("OPERATOR", "ADMIN")
 		.antMatchers(ADMIN).hasRole("ADMIN")
+		.antMatchers("/v3/api-docs/**", "/users/login","/v2/api-docs", "/configuration/ui", "/swagger-resources/**", "/configuration/**", "/swagger-ui/**", "/webjars/**").permitAll()
 		.anyRequest().authenticated();
 		
 		http.cors().configurationSource(corsConfigurationSource());

@@ -10,6 +10,8 @@ import java.util.Set;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Relation(value="user", collectionRelation="users")
 public class UserDto extends RepresentationModel<ProductResource> {

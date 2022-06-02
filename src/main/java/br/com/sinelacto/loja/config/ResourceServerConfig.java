@@ -49,7 +49,9 @@ public class ResourceServerConfig  extends ResourceServerConfigurerAdapter{
 		.antMatchers(HttpMethod.GET, OPERATOR_OR_ADMIN).permitAll()
 		.antMatchers(OPERATOR_OR_ADMIN).hasAnyRole("OPERATOR", "ADMIN")
 		.antMatchers(ADMIN).hasRole("ADMIN")
-		.antMatchers("/v3/api-docs/**", "/users/login","/v2/api-docs", "/configuration/ui", "/swagger-resources/**", "/configuration/**", "/swagger-ui/**", "/webjars/**").permitAll()
+		.antMatchers("/v3/api-docs/**", "/users/login","/v2/api-docs", "/configuration/ui",
+				"/swagger-resources/**", "/configuration/**", "/swagger-ui**", "/webjars/**")
+		.permitAll()
 		.anyRequest().authenticated();
 		
 		http.cors().configurationSource(corsConfigurationSource());

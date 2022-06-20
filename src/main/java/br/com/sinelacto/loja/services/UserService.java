@@ -1,10 +1,10 @@
 package br.com.sinelacto.loja.services;
 
-import br.com.sinelacto.loja.api.v1.UserInsertDto;
-import br.com.sinelacto.loja.api.v1.UserResourceAssembler;
+import br.com.sinelacto.loja.api.v1.users.UserInsertDto;
+import br.com.sinelacto.loja.api.v1.users.UserResourceAssembler;
 import br.com.sinelacto.loja.models.Role;
 import br.com.sinelacto.loja.models.User;
-import br.com.sinelacto.loja.api.v1.UserDto;
+import br.com.sinelacto.loja.api.v1.users.UserDto;
 import br.com.sinelacto.loja.repository.RoleRepository;
 import br.com.sinelacto.loja.repository.UserRepository;
 import lombok.AllArgsConstructor;

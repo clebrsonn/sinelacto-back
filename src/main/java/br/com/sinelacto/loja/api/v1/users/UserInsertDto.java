@@ -1,12 +1,8 @@
-package br.com.sinelacto.loja.api.v1;
+package br.com.sinelacto.loja.api.v1.users;
 
-import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.springframework.hateoas.RepresentationModel;
 import org.springframework.hateoas.server.core.Relation;
-
-import java.util.Set;
 
 @Data
 @EqualsAndHashCode(callSuper = true)

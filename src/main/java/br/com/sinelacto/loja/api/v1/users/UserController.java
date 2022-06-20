@@ -1,19 +1,13 @@
-package br.com.sinelacto.loja.api.v1;
+package br.com.sinelacto.loja.api.v1.users;
 
-import br.com.sinelacto.loja.models.Product;
-import br.com.sinelacto.loja.services.CloudinaryService;
-import br.com.sinelacto.loja.services.ProductService;
 import br.com.sinelacto.loja.services.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
@@ -21,7 +15,7 @@ import java.net.URI;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("v1/user")
+@RequestMapping("v1/users")
 public class UserController {
 
     @Autowired
@@ -52,7 +46,7 @@ public class UserController {
 
     }
 
-    @PostMapping
+    @PostMapping("/new")
     public ResponseEntity<UserDto> insert(@Valid @RequestBody UserInsertDto dto){
         UserDto newDTO = service.insert(dto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")

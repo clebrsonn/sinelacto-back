@@ -1,4 +1,4 @@
-package br.com.sinelacto.loja.api.v1;
+package br.com.sinelacto.loja.api.v1.products;
 
 import br.com.sinelacto.loja.models.Category;
 import lombok.Builder;

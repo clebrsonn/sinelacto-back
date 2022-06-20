@@ -1,9 +1,9 @@
-package br.com.sinelacto.loja.api.v1;
+package br.com.sinelacto.loja.api.v1.products;
 
+import br.com.sinelacto.loja.api.v1.UriResource;
 import br.com.sinelacto.loja.services.CloudinaryService;
 import br.com.sinelacto.loja.services.ProductService;
 import br.com.sinelacto.loja.models.Product;
-import com.cloudinary.Cloudinary;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

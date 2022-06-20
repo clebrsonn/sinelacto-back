@@ -8,7 +8,7 @@ import java.net.URI;
 public class UriResource {
     private String uri;
 
-    UriResource(URI path){
+    public UriResource(URI path){
         this.uri=path.toString();
     }
 }

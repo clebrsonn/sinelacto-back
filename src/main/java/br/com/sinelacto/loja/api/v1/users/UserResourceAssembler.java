@@ -1,6 +1,5 @@
-package br.com.sinelacto.loja.api.v1;
+package br.com.sinelacto.loja.api.v1.users;
 
-import br.com.sinelacto.loja.models.Product;
 import br.com.sinelacto.loja.models.User;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,22 +1,8 @@
-package br.com.sinelacto.loja.api.v1;
+package br.com.sinelacto.loja.api.v1.products;
 
 import br.com.sinelacto.loja.models.Product;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.URL;
-import org.springframework.hateoas.CollectionModel;
-import org.springframework.hateoas.RepresentationModel;
-import org.springframework.hateoas.server.RepresentationModelAssembler;
-import org.springframework.hateoas.server.core.Relation;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.stereotype.Component;
-
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
-import java.math.BigDecimal;
 
 @Component
 public class ProductResourceAssembler extends RepresentationModelAssemblerSupport<Product, ProductResource> {
